@@ -23,15 +23,22 @@ HealthyEats is designed to help users manage their diet based on their personal 
 
 ## 📥 Download & Test the App
 
-If you want to test the app on an Android device without building it yourself, you can download the pre-compiled APK files from the repository:
+Since the `build/` directory is automatically generated and intentionally excluded from version control, you won't find the `.apk` files directly in the source code after cloning. 
 
-- **Release APK (Recommended):**  
-  `build/app/outputs/flutter-apk/app-release.apk`  
-  *(Optimized for performance)*
+To test the app, you have two options:
 
-- **Debug APK:**  
-  `build/app/outputs/flutter-apk/app-debug.apk`  
-  *(Used for testing and debugging)*
+**Option 1: Download from Releases (Recommended for Testers)**
+If the developer has provided pre-compiled APKs, you can download them directly from the **[Releases](../../releases)** page of this repository.
+
+**Option 2: Build it yourself (For Developers)**
+If you have Flutter installed, you can generate the APK yourself:
+1. Clone the repository.
+2. Run `flutter pub get` to install dependencies.
+3. Run the following command to generate a release APK:
+   ```bash
+   flutter build apk --release
+   ```
+4. The generated APK will be located at: `build/app/outputs/flutter-apk/app-release.apk`
 
 ### How to Install the APK:
 1. Transfer the `.apk` file to your Android device.
